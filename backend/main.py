@@ -10,11 +10,6 @@ class Query(BaseModel):
 def home():
     return {"status": "Kanha AI is running"}
 
-@app.post("/chat")
-def chat(query: Query):
-    return {
-        "reply": "🙏 Kanha is listening. LLM integration coming soon."
-    }
 from core.kanha_brain import kanha_think
 from app.offline_cmds.commands import handle_command
 
